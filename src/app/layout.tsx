@@ -2,7 +2,7 @@ import { ReduxProvider } from '@/store/provider';
 import './globals.css';
 
 export const metadata = {
-  title: 'Create Next App',
+  title: 'Netflix',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

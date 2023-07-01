@@ -1,8 +1,12 @@
+'use client'
+
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function Nav() {
   const [show, setShow] = useState(false);
+  const router = useRouter();
 
   const transitionNavBar = () => (window.scrollY > 100 ? setShow(true) : setShow(false));
 
@@ -25,6 +29,7 @@ export default function Nav() {
           alt="Netflix Logo"
           priority
           className="w-20 cursor-pointer"
+          onClick={() => router.push('/')}
         />
         <Image
           src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
@@ -32,6 +37,7 @@ export default function Nav() {
           width={30}
           alt="Netflix Avatar"
           className="cursor-pointer"
+          onClick={() => router.push('/profile')}
         />
       </div>
     </div>
